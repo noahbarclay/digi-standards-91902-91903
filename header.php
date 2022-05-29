@@ -15,7 +15,14 @@
 
 <body>
 
+<div class="navbar">
 
-
+  <a href="http://localhost/digi-standards-91902-91903/index.php">Home</a>
+  <a href="http://localhost/digi-standards-91902-91903/about.php">About</a>
+  <a href="http://localhost/digi-standards-91902-91903/contact.php">Contact</a>
+  <a href="http://localhost/digi-standards-91902-91903/prints.php">Prints</a>
+  <a href="http://localhost/digi-standards-91902-91903/setup.php">Database Test</a>
+  <a href="#" class="right">Link</a>
+</div>
 
 </body>

@@ -1,5 +1,5 @@
-<?php
-include "setup.php";
+<?php include "setup.php";
+
 //$sql = "SELECT results_id, standardnum, title, core_id, result, date FROM results";
 $sql= "SELECT `standardnum`,`title`,`result`,`date`,firstname,surname
 FROM results

@@ -1,3 +1,5 @@
+<?php include("header.php");?>
+
 <?php
 $servername = "localhost";
 $username = "sec_user";
