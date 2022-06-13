@@ -1,4 +1,4 @@
-<?php include("../Components/header.php");?>
+<?php include("header.php");?>
 
 <style>
 /*  SECTIONS  */
@@ -55,4 +55,4 @@
 	</div>
 </div>
 
-<?php include("../Components/footer.php");?>
+<?php include("footer.php");?>
