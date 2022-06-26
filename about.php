@@ -53,6 +53,10 @@
 	<div class="col span_1_of_2">
 	This is column 2
 	</div>
-</div>
+</div>''
+
+
+
+
 
 <?php include("footer.php");?>
