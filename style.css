@@ -17,7 +17,7 @@
     margin: 0;
   }
 
-  nav {
-    color: #292929;
+  .navbar-light {
+    color: #292929 !important;
     font-family: Arial, Helvetica, sans-serif;
   }
