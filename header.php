@@ -19,7 +19,7 @@
 
 <body>  
 <nav class="navbar bg-dark navbar-dark navbar-expand-md justify-content-center">
-    <a href="index.php" class="navbar-brand mr-0"> <img src="logo.jpg" alt="Logo" width="1100" height="500", class="navbar-brand mr-0"> </a>
+    <a href="index.php" class="navbar-brand mr-0"> <img src="images/logo.jpg" alt="Logo" width="50" height="50"> </a>
     <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
         <span class="navbar-toggler-icon"></span>
     </button>

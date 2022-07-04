@@ -13,13 +13,13 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="waves.jpg" alt="Waves" width="1100" height="500">
+      <img src="images/waves.jpg" alt="Waves" width="100%" height="100%">
     </div>
     <div class="carousel-item">
-      <img src="sunset.jpg" alt="Sunset" width="1100" height="500">
+      <img src="images/sunset.jpg" alt="Sunset" width="1100" height="500">
     </div>
     <div class="carousel-item">
-      <img src="tawharanui.jpg" alt="Tawharanui" width="1100" height="500">
+      <img src="images/tawharanui.jpg" alt="Tawharanui" width="100%" height="100%">
     </div>
   </div>
   
