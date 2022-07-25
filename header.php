@@ -2,19 +2,27 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/jpg" href="images/logo.jpg" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="script" href="script.js" />
-  <script src="https://kit.fontawesome.com/7b1535357d.js" crossorigin="anonymous"></script>
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- CSS only -->
+<title>Pix Prints</title>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/jpg" href="images/logo.jpg" />
+<link rel="stylesheet" href="style.css" />
+<link rel="script" href="script.js" />
+<script src="https://kit.fontawesome.com/7b1535357d.js" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">  
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-  <title>Pix Prints</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/carousel.css" />
+
+
 </head>
 
 <body>  
@@ -26,7 +34,7 @@
     <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
         <ul class="navbar-nav mx-auto text-center">
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">Link <span class="sr-only">Home</span></a>
+                <a class="nav-link" href="index.php">Home<span class="sr-only">Home</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="about.php">About</a>
