@@ -1,7 +1,7 @@
-<?php include("pages/headnav.php");?>
+<?php include("pages/header.php");?>
 
 <head>
-<link rel="stylesheet" href="css/login.css"/>
+<link rel="stylesheet" href="css/admin.css"/>
 </head>
 
 <div class="login">

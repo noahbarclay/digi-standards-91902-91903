@@ -1,3 +1,3 @@
-<?php include("pages/headnav.php");?>
+<?php include("pages/header.php");?>
 
 <?php include("pages/footer.php");?>
