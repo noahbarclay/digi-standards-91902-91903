@@ -13,7 +13,7 @@
 
 if ($conn->query($sql) === TRUE) { # this executes the insert and tests if it works
   #echo "record $pageID updated successfully";
-    header("Location: admin.php"); #redirect to the admin page if succesful edit and update
+    header("Location: admin/admin.php"); #redirect to the admin page if succesful edit and update
 die();
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;# this shows any error for debugging

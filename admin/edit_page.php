@@ -1,6 +1,5 @@
 <?php include("pages/headnav.php");?>
-
-<?php include("pages/setup.php");?>
+<?php include("admin/setup.php");?>
 
 <link rel="stylesheet" type="text/css" href="css/form.css">
 

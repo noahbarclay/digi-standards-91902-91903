@@ -1,5 +1,1 @@
-<?php include("header.php");?>
-
-<t>Contact</t>
-
-<?php include("footer.php");?>
+<?php include("pages/header.php");?>

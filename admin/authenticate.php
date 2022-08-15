@@ -1,4 +1,10 @@
 <?php
+// disable notices
+error_reporting(E_ALL ^ E_NOTICE); 
+// We need to use sessions, so you should always start sessions using the below code.
+?>
+
+<?php
 session_start();
 // Change this to your connection info.
 $DATABASE_HOST = 'localhost';
@@ -52,13 +58,14 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         ?>
-        <?php include('home.php'); ?>
-       
-       <?php
+        <?php include('admin.php'); ?>
+        <?php
+    
         } else {
         ?>
-        
-        <?php include('index.php'); ?>
+        <?php include('../index.php'); ?>
         <?php
         }
     }
+
+    
