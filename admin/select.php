@@ -1,4 +1,3 @@
-
 <?php include "setup.php";
 
 //$sql = "SELECT results_id, standardnum, title, core_id, result, date FROM results";

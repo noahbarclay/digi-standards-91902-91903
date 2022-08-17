@@ -1,9 +1,7 @@
-<?php
-// disable notices
-error_reporting(E_ALL ^ E_NOTICE); 
-// We need to use sessions, so you should always start sessions using the below code.
-?>
+<!-- Disable notices  -->
+<?php error_reporting(E_ALL ^ E_NOTICE); ?>
 
+<!-- We need to use sessions, so you should always start sessions using the below code. -->
 <?php
 session_start();
 // Change this to your connection info.
@@ -44,7 +42,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            echo 'Welcome ' . $_SESSION['name'] . '!';
+            header("Location: admin.php");
         } else {
             // Incorrect password
             echo 'Incorrect username and/or password!';
@@ -58,9 +56,9 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         ?>
-        <?php include('admin.php'); ?>
-        <?php
-    
+        <? header("Location: admin.php"); ?>
+       
+       <?php
         } else {
         ?>
         <?php include('../index.php'); ?>

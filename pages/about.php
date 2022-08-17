@@ -1,3 +1,4 @@
-<?php include("pages/header.php");?>
+<?php include("header.php");?>
+<title>About │ Pix Prints</title>
 
-<?php include("pages/footer.php");?>
+<?php include("footer.php");?>

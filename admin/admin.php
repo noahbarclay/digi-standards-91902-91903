@@ -4,19 +4,32 @@
 <title>Admin │ Pix Prints</title>
 
 <style>
-anyone table {
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
 }
-th, td {
-  text-align: left;
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
   padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}</style>
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
 </style>
+
+
 </head>
 
 <!-- Page start -->
@@ -32,7 +45,7 @@ tr:nth-child(even){background-color: #f2f2f2}</style>
 
   <!-- Edit table -->
 
-<table>
+<table id="customers">
     <tr>
       <th>Page Num</th>
       <th>Title1</th>
@@ -66,6 +79,9 @@ tr:nth-child(even){background-color: #f2f2f2}</style>
 $conn->close();
 ?>
       </table>
+
+   
+
       </body>
 
       <?php include("../pages/footer.php");?>

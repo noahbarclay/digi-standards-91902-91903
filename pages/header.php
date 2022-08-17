@@ -34,14 +34,14 @@ session_start();
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 ?>
 <!-- Start Members-->
-<?php include('navlogin.php'); ?>
+<?php include('navlogout.php'); ?>
 <!-- End Members -->
 <?php
 
 } else {
 ?>
 <!-- Start Guest -->
-<?php include('navlogout.php'); ?>
+<?php include('navlogin.php'); ?>
 <!-- End Guest -->
 <?php
 };?>
