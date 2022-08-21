@@ -8,7 +8,7 @@
           <p class="text-sm mb-0 text-muted">Web Developer</p>
         </div>
         <!-- Small Brand information, appears on minimized sidebar--><a class="brand-small text-center" href="index.html">
-          <p class="h1 m-0">BD</p></a>
+        <img src="../images/logo.png" alt="Girl in a jacket" width="30" height="30">
       </div>
       <!-- Sidebar Navigation Menus--><span class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Main</span>
       <ul class="list-unstyled">                  

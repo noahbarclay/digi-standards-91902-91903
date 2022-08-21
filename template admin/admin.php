@@ -18,7 +18,7 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="../images/logo.jpg">
+    <link rel="shortcut icon" href="../images/logo.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -30,49 +30,9 @@
       <section class="bg-white py-5">
         <div class="container-fluid">
           <div class="row d-flex align-items-md-stretch">
-            <!-- To Do List-->
-            <div class="col-lg-3 col-md-6">
-              <div class="card shadow-0">
-                <div class="card-body p-0">
-                  <h2 class="h3 fw-normal">To do List</h2>
-                  <p class="text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <form>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list1">
-                      <label class="form-check-label text-sm" for="list1">Similique sunt in culpa qui officia</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list2">
-                      <label class="form-check-label text-sm" for="list2">Ed ut perspiciatis unde omnis iste</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list3">
-                      <label class="form-check-label text-sm" for="list3">At vero eos et accusamus et iusto </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list4">
-                      <label class="form-check-label text-sm" for="list4">Explicabo Nemo ipsam voluptatem</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list5">
-                      <label class="form-check-label text-sm" for="list5">Similique sunt in culpa qui officia</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list6">
-                      <label class="form-check-label text-sm" for="list6">At vero eos et accusamus et iusto</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list7">
-                      <label class="form-check-label text-sm" for="list7">Similique sunt in culpa qui officia</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list8">
-                      <label class="form-check-label text-sm" for="list8">Ed ut perspiciatis unde omnis iste</label>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+           
+
+          
             <!-- Pie Chart-->
             <div class="col-lg-3 col-md-6">
               <div class="card shadow-0">
