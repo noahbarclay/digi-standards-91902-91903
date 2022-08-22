@@ -13,10 +13,10 @@
           <a class="nav-link" href="about.php">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="prints.php">Prints</a>
+          <a class="nav-link" href="pages/prints.php">Prints</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact</a>
+          <a class="nav-link" href="pages/contact.php">Contact</a>
         </li>
         <a href="../admin/login.php" class="btn btn-dark ms-3">Login</a>
       </ul>

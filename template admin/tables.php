@@ -1,9 +1,24 @@
+<!-- Disable notices  -->
+<?php error_reporting(E_ALL ^ E_NOTICE); ?>
+
+<?php include("../admin/setup.php");?> 
+
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: login.php');
+	exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Dashboard by Bootstrapious.com</title>
+    <title>Admin</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -54,35 +69,83 @@
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table text-sm mb-0">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th class="border-bottom-0" scope="row">3</th>
-                          <td class="border-bottom-0">Larry</td>
-                          <td class="border-bottom-0">the Bird</td>
-                          <td class="border-bottom-0">@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <?php 
+    print_r($_GET);
+    $pageID= $_GET["id"]; ?>
+
+
+			<div class="content">
+			<h2>Edit page</h2>
+	
+		<?php   
+    $sql = "SELECT * FROM pages where id= $pageID";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        $row = $result->fetch_assoc(); 
+        #debugging print_r($row);
+		$pageID=$row["id"];
+        $title1=$row["title1"];
+        $img1=$row["img1"];
+      
+    } else {
+        echo "0 results";
+    }
+$conn->close();
+      
+    ?>
+
+    <!--new stuff -->
+
+    <form action="edit_action_page.php" method="post" >
+    <div class="row">
+      <div class="col-25">
+        <label for="pagenum">Page Number</label>
+      </div>
+      <div class="col-75">
+    <?php print $pageID ?>
+          <input type="hidden" id="pageID" name="pageID" value= "<?php print $pageID ?>">
+      </div>
+    </div>
+
+<!-- Title One -->
+
+    <div class="row">
+      <div class="col-25">
+        <label for="title1">Title One</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="title1" name="title1" value="<?php print $title1 ?>">
+      </div>
+    </div>
+    
+
+<!-- Image One -->
+
+    <div class="row">
+      <div class="col-25">
+        <label for="img1">Image One</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="img1" name="img1" value="<?php print $img1 ?>">
+      </div>
+    </div>
+    
+<br>
+
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
+
+
+
+
+<!-- End of my code -->
+
+
                   </div>
                 </div>
               </div>
@@ -281,89 +344,7 @@
 <br><br><br>
 <link href="../css/edit_page.css" rel="stylesheet" type="text/css">
 
-<!-- Disable notices  -->
-<?php error_reporting(E_ALL ^ E_NOTICE); ?>
-
-<?php
-// We need to use sessions, so you should always start sessions using the below code.
-session_start();
-// If the user is not logged in redirect to the login page...
-if (!isset($_SESSION['loggedin'])) {
-	header('Location: login.php');
-	exit;
-}
-?>
-<?php 
-    print_r($_GET);
-    $pageID= $_GET["id"]; ?>
 
 
-			<div class="content">
-			<h2>Edit page</h2>
-	
-		<?php   
-    $sql = "SELECT * FROM pages where id= $pageID";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        // output data of each row
-        $row = $result->fetch_assoc(); 
-        #debugging print_r($row);
-		$pageID=$row["id"];
-        $title1=$row["title1"];
-        $img1=$row["img1"];
-      
-    } else {
-        echo "0 results";
-    }
-$conn->close();
-      
-    ?>
-
-    <!--new stuff -->
-
-    <form action="edit_action_page.php" method="post" >
-    <div class="row">
-      <div class="col-25">
-        <label for="pagenum">Page Number</label>
-      </div>
-      <div class="col-75">
-    <?php print $pageID ?>
-          <input type="hidden" id="pageID" name="pageID" value= "<?php print $pageID ?>">
-      </div>
-    </div>
-
-<!-- Title One -->
-
-    <div class="row">
-      <div class="col-25">
-        <label for="title1">Title One</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="title1" name="title1" value="<?php print $title1 ?>">
-      </div>
-    </div>
-    
-
-<!-- Image One -->
-
-    <div class="row">
-      <div class="col-25">
-        <label for="img1">Image One</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="img1" name="img1" value="<?php print $img1 ?>">
-      </div>
-    </div>
-    
-<br>
-
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-  </form>
-
-	</body>
-</html>
   </body>
 </html>

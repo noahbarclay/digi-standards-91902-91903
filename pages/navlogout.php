@@ -10,13 +10,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="../about.php">About</a>
+          <a class="nav-link" href="pages/about.php">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../prints.php">Prints</a>
+          <a class="nav-link" href="pages/prints.php">Prints</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../contact.php">Contact</a>
+          <a class="nav-link" href="pages/contact.php">Contact</a>
         </li>
         <a href="../admin/admin.php" class="btn btn-dark ms-3">Admin</a>
         <a href="../admin/select.php" class="btn btn-dark ms-3">Select</a>

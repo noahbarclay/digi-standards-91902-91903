@@ -8,7 +8,7 @@
           <p class="text-sm mb-0 text-muted">Web Developer</p>
         </div>
         <!-- Small Brand information, appears on minimized sidebar--><a class="brand-small text-center" href="index.html">
-        <img src="../images/logo.png" alt="Girl in a jacket" width="30" height="30">
+        <img src="../images/logo.png" alt="Logo" width="30" height="30">
       </div>
       <!-- Sidebar Navigation Menus--><span class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Main</span>
       <ul class="list-unstyled">                  
@@ -28,15 +28,6 @@
             <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
               <use xlink:href="#portfolio-grid-1"> </use>
             </svg>Tables </a></li>
-        <li class="sidebar-item"><a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"> 
-            <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
-              <use xlink:href="#browser-window-1"> </use>
-            </svg>Test Folder </a>
-          <ul class="collapse list-unstyled " id="exampledropdownDropdown">
-            <li><a class="sidebar-link" href="#">Page</a></li>
-            <li><a class="sidebar-link" href="#">Page</a></li>
-            <li><a class="sidebar-link" href="#">Page</a></li>
-          </ul>
         </li>
         <li class="sidebar-item"><a class="sidebar-link" href="login.php"> 
             <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
