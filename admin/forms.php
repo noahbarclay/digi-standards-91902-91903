@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Dashboard by Bootstrapious.com</title>
+    <title>Admin │ Pix Prints</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -19,9 +19,8 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.ico">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    
   </head>
   <body>
   <?php include("navbar.php");?>
@@ -50,11 +49,6 @@
             <div class="col-lg-6">
               <div class="card">
                 <div class="card-header border-bottom">
-                  <h3 class="h4 mb-0">Basic Form</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm">Lorem ipsum dolor sit amet consectetur.</p>
-                  <form>
                     <div class="mb-3">
                       <label class="form-label" for="exampleInputEmail1">Email address</label>
                       <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp">
@@ -69,108 +63,6 @@
                 </div>
               </div>
             </div>
-            <!-- Horizontal Form-->
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h3 class="h4 mb-0">Horizontal Form</h3>
-                </div>
-                <div class="card-body">
-                  <p class="text-sm">Lorem ipsum dolor sit amet consectetur.</p>
-                  <form class="form-horizontal">
-                    <div class="row gy-2 mb-4">
-                      <label class="col-sm-3 form-label" for="inputHorizontalElOne">Email</label>
-                      <div class="col-sm-9">
-                        <input class="form-control" id="inputHorizontalElOne" type="email" placeholder="Email Address"><small class="form-text">Example help text that remains unchanged.</small>
-                      </div>
-                    </div>
-                    <div class="row gy-2 mb-4">
-                      <label class="col-sm-3 form-label" for="inputHorizontalElTwo">Password</label>
-                      <div class="col-sm-9">
-                        <input class="form-control" id="inputHorizontalElTwo" type="password" placeholder="Pasword"><small class="form-text">Example help text that remains unchanged.</small>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-9 ms-auto">
-                        <input class="btn btn-primary" type="submit" value="Signin">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <!-- Inline Form-->
-            <div class="col-lg-8">                           
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h3 class="h4 mb-0">Inline Form</h3>
-                </div>
-                <div class="card-body">
-                  <form class="row g-3 align-items-center">
-                    <div class="col-lg">
-                      <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
-                      <div class="input-group">
-                        <div class="input-group-text">@</div>
-                        <input class="form-control" id="inlineFormInputGroupUsername" type="text" placeholder="Username">
-                      </div>
-                    </div>
-                    <div class="col-lg">
-                      <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                      <select class="form-select" id="inlineFormSelectPref">
-                        <option selected>Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </div>
-                    <div class="col-lg">
-                      <button class="btn btn-primary" type="submit">Submit</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <!-- Modal Form-->
-            <div class="col-lg-4">
-              <div class="card">
-                <div class="card-header border-bottom">
-                  <h3 class="mb-0">Signin Modal</h3>
-                </div>
-                <div class="card-body text-center">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Form in simple modal </button>
-                  <!-- Modal-->
-                  <div class="modal fade text-start" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="myModalLabel">Modal Form</h5>
-                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <p>Lorem ipsum dolor sit amet consectetur.</p>
-                          <form>
-                            <div class="mb-3">
-                              <label class="form-label" for="modalInputEmail1">Email address</label>
-                              <input class="form-control" id="modalInputEmail1" type="email" aria-describedby="emailHelp">
-                              <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
-                            </div>
-                            <div class="mb-3">
-                              <label class="form-label" for="modalInputPassword1">Password</label>
-                              <input class="form-control" id="modalInputPassword1" type="password">
-                            </div>
-                          </form>
-                        </div>
-                        <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Save changes</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Form Elements -->
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header border-bottom">
