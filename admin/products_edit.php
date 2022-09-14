@@ -1,5 +1,63 @@
+
+<?php include("setup.php");?> 
+
+<br><br><br>
+<link href="../css/edit_page.css" rel="stylesheet" type="text/css">
+
+<!-- Disable notices  -->
+<?php error_reporting(E_ALL ^ E_NOTICE); ?>
+
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: login.php');
+	exit;
+}
+?>
+<?php 
+    print_r($_GET);
+    $id= $_GET["id"]; ?>
+
+			<div class="content">
+			<h2>Edit page</h2>
+	
+		<?php   
+    $sql = "SELECT * FROM prints where id= $id";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        $row = $result->fetch_assoc(); 
+        #debugging print_r($row);
+        $id=$row["id"]; 
+        $name=$row["name"];
+        $image=$row["image"];
+        $description=$row["description"];
+        $price=$row["price"];
+      
+    } else {
+        echo "0 results";
+    }
+$conn->close();
+      
+    ?>
+
+!-- Disable notices  -->
+<?php error_reporting(E_ALL ^ E_NOTICE); ?>
+
 <?php include("../admin/setup.php");?> 
-<?php include("permissions.php");?> 
+
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: login.php');
+	exit;
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -32,38 +90,15 @@
   <body>
   <?php include("navbar.php");?>
 
-<style>
-#customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #customers tr:hover {background-color: #ddd;}
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: grey;
-    color: white;
-  }</style>
-
-
-</header>
-<div class="bg-gray-200 text-sm">
+    <!--new stuff -->
+    </header>
+      <!-- Breadcrumb-->
+      <div class="bg-gray-200 text-sm">
         <div class="container-fluid">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb mb-0 py-3">
               <li class="breadcrumb-item"><a class="fw-light" href="admin.php">Home</a></li>
-              <li class="breadcrumb-item active fw-light" aria-current="page">Products  </li>
+              <li class="breadcrumb-item active fw-light" aria-current="page">Product Edit Page <?php print $id ?>  </li>
             </ol>
           </nav>
         </div>
@@ -71,67 +106,81 @@
       <!-- Page Header-->
       <header class="py-4">
         <div class="container-fluid py-2">
-          <h1 class="h3 fw-normal mb-0">Forms</h1>
         </div>
       </header>
-      <!-- Forms Section-->
-      <section class="pb-5"> 
+      <section class="tables">   
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
               <div class="card">
                 <div class="card-header border-bottom">
-                  <h3 class="h4 mb-0">All form elements</h3>
-        
-  <table id="customers">
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Image</th>
-    </tr>
-<?php  
-   // $message= $_SESSION["message"];
-    //  print $message;
-    $sql = "SELECT * FROM prints";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        // output data of each row
-     while($row = $result->fetch_assoc()) {
-        #print_r($row); #debugging 
-        $id=$row["id"]; 
-        $name=$row["name"];
-        $image=$row["image"];
-        $description=$row["description"];
-        $price=$row["price"];
-?>
-    <tr>
-    <td><?php print $id; ?>
-          <a href='contact_delete.php?id=<?php print $id; ?>'>Delete?</a>
-          <a href='products_edit.php?id=<?php print $id; ?>'>Edit</a>
-          </td>
-      <td><?php print $name; ?></td>
-      <td><?php print $description; ?></td>
-      <td><?php print $price; ?></td>
-      <td><img src="../images/<?php echo $image; ?>" alt="Print" width="10%" height="10%"></td>
-    </tr>
-<?php
-    }
-    } else {
-        echo "There are no records in this table";
-    }
-$conn->close();
-?>
-      </table>
+                  <h3 class="h4 mb-0">Edit Product</h3>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table text-sm mb-0">
+    <form action="products_edit_action.php" method="post" >
+    <div class="row">
+      <div class="col-25">
+        <label for="pagenum">Product ID</label>
       </div>
-            </div>
-          </div>
-        </div>
+      <div class="col-75">
+    <?php print $id ?>
+          <input type="hidden" id="id" name="id" value= "<?php print $id ?>">
+      </div>
     </div>
 
+<!-- Name -->
 
+    <div class="row">
+      <div class="col-25">
+        <label for="title1">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="name" value="<?php print $name ?>">
+      </div>
+    </div>
+    
 
+<!-- Description -->
+
+    <div class="row">
+      <div class="col-25">
+        <label for="img1">Description</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="description" name="description" value="<?php print $description ?>">
+      </div>
+    </div>
+
+    <!-- Price -->
+
+    <div class="row">
+      <div class="col-25">
+        <label for="img1">Price</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="price" name="price" value="<?php print $price ?>">
+      </div>
+    </div>
+
+    <!-- Image -->
+
+    <div class="row">
+      <div class="col-25">
+        <label for="img1">Image</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="image" name="image" value="<?php print $image ?>">
+      </div>
+    </div>
+    
+<br>
+
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
 
 <!-- End of my code -->
     <!-- JavaScript files-->
@@ -179,4 +228,6 @@ $conn->close();
 
 
   </body>
+
+	</body>
 </html>
