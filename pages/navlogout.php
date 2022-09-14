@@ -18,8 +18,6 @@
         <li class="nav-item">
           <a class="nav-link" href="contact.php">Contact</a>
         </li>
-        <a href="../admin/admin.php" class="btn btn-dark ms-3">Admin</a>
-        <a href="../admin/select.php" class="btn btn-dark ms-3">Select</a>
         <a href="../admin/logout.php" class="btn btn-dark ms-3">Logout</a>
       </ul>
     </div>

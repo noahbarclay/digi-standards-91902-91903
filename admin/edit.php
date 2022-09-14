@@ -1,17 +1,5 @@
-<!-- Disable notices  -->
-<?php error_reporting(E_ALL ^ E_NOTICE); ?>
-
 <?php include("../admin/setup.php");?> 
-
-<?php
-// We need to use sessions, so you should always start sessions using the below code.
-session_start();
-// If the user is not logged in redirect to the login page...
-if (!isset($_SESSION['loggedin'])) {
-	header('Location: login.php');
-	exit;
-}
-?>
+<?php include("permissions.php");?> 
 
 <!DOCTYPE html>
 <html>
@@ -31,23 +19,51 @@ if (!isset($_SESSION['loggedin'])) {
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
+
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../images/logo.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+        <link rel="stylesheet" href="../css/edit_page.css">
+
   </head>
   <body>
   <?php include("navbar.php");?>
+
+<style>
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: grey;
+    color: white;
+  }</style>
+
+
 </header>
-      <!-- Breadcrumb-->
-      <div class="bg-gray-200 text-sm">
+<div class="bg-gray-200 text-sm">
         <div class="container-fluid">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb mb-0 py-3">
-              <li class="breadcrumb-item"><a class="fw-light" href="index.html">Home</a></li>
-              <li class="breadcrumb-item active fw-light" aria-current="page">Tables  </li>
+              <li class="breadcrumb-item"><a class="fw-light" href="admin.php">Home</a></li>
+              <li class="breadcrumb-item active fw-light" aria-current="page">Edit  </li>
             </ol>
           </nav>
         </div>
@@ -55,23 +71,18 @@ if (!isset($_SESSION['loggedin'])) {
       <!-- Page Header-->
       <header class="py-4">
         <div class="container-fluid py-2">
-          <h1 class="h3 fw-normal mb-0">Tables</h1>
+          <h1 class="h3 fw-normal mb-0">Forms</h1>
         </div>
       </header>
-      <section class="tables">   
+      <!-- Forms Section-->
+      <section class="pb-5"> 
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <div class="card">
                 <div class="card-header border-bottom">
-                  <h3 class="h4 mb-0">Basic Table</h3>
-                </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table text-sm mb-0">
-  
-  
-
+                  <h3 class="h4 mb-0"></h3>
+        
   <table id="customers">
     <tr>
       <th>Page Num</th>
@@ -106,6 +117,11 @@ if (!isset($_SESSION['loggedin'])) {
 $conn->close();
 ?>
       </table>
+      </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
 
 

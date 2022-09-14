@@ -15,7 +15,14 @@
 					<i class="fas fa-lock"></i>
 				</label>
 				<input type="password" name="password" placeholder="Password" id="password" required>
+				<P>Don't have an account? <a href="register.php">Register here</a></P>
+				
 				<input type="submit" value="Login">
+
+				<?php if(isset($_SESSION['message'])){ 
+					echo $_SESSION['message'];
+					unset($_SESSION['message']); } ?>
+				
 			</form>
 		</div>
 	</body>

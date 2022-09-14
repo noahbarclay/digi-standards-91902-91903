@@ -1,3 +1,5 @@
+<?php include("permissions.php");?> 
+
 <!DOCTYPE html>
 <html>
   <head>

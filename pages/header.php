@@ -15,33 +15,26 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
-
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"> -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" /> -->
-
     </head>
     <!--Main Navigation-->
-
-    <script type="text/javascript" src="../js/mdb.min.js"></script>
-    <!-- Custom scripts -->
-    <script type="text/javascript" src="../js/script.js"></script>
-
     <br>
     <br>
 
 <?php
 session_start();
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+if (isset($_SESSION['loggedin']) && $_SESSION['admin'] == 1) {
 ?>
 <!-- Start Members-->
-<?php include('navlogout.php'); ?>
+<?php include('admin_nav_home.php'); ?>
 <!-- End Members -->
 <?php
 
 } else {
 ?>
 <!-- Start Guest -->
-<?php include('navlogin.php'); ?>
+<?php include('nav_check.php'); ?>
 <!-- End Guest -->
 <?php
 };?>
+
+
