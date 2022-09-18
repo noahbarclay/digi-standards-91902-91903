@@ -1,101 +1,57 @@
-
-<?php include("../pages/header.php");?>
-
-<?php include("../admin/setup.php");?>
-
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      
+        <link rel="stylesheet" href="../css/prints.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+        <?php include("header.php");?>
+        <?php include("../admin/setup.php");?> 
+
+        <title>Prints</title>
+    </head>
+      <body>
+ 
+        <br>
+<h1>Prints</h1>
+
 <style>
-div.gallery {
-  border: 1px solid #ccc;
-}
+                    p {
+                      text-align: center;
+                    }
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
+                    h1 {
+                      text-align: center;
+                    }
+                  </style>
 
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
+        <div class="container1">
+          <div class="gallery">
 
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
-</head>
-<body>
-
-<h2>Gallery</h2>
-
-  <?php   
+    <?php   
     $sql = "SELECT * FROM prints";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) { 
         #debuggin print_r($row);
-        $id=$row["id"];
+        $prints_id=$row["prints_id"];
         $name=$row["name"];
         $price=$row["price"];
         $description=$row["description"];
         $image=$row["image"];
         ?>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_5terre.jpg">
-      <img src="../images/<?php echo $image ;?>" alt="Cinque Terre" width="600" height="400">
-    </a>
-    <div class="desc"><?php echo $name ?></div>
-	<div class="desc"><?php echo $description ?></div>
-	<h5><button type="button" onclick="location.href='printshop.php?id=<?php print $id;?>';">Buy now</button></h5> 
-	<p><?php echo $name ?></p>
-  </div>
-</div>
-
-<div class="clearfix"></div>
-
-  
-  <?php
-      }
-    }?>
-
-  
-
-
-
-</body>
-
+            <figure class="gallery__item gallery__item--<?php echo $prints_id ;?>">
+                <a href="printshop.php?prints_id=<?php print $prints_id;?>">
+                   <img src="../images/<?php echo $image ;?>" alt="Gallery image 1" class="gallery__img">
+                    <p><u><?php echo $name ;?></u></p></a>
+                </figure>  
+               <?php } } ?>
+            </div>
+        </div>
+    </body>
 </html>

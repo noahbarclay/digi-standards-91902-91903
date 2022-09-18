@@ -1,6 +1,6 @@
 <?php
     #print_r($_POST);
-    $id=$_POST["id"]; 
+    $prints_id=$_POST["prints_id"]; 
     $name=$_POST["name"];
     $image=$_POST["image"];
     $description=$_POST["description"];
@@ -9,7 +9,7 @@
     
     include"setup.php"; #connect to the database
     #insert needs the field names (no quotes) and the values (variables with quotes)
-    $sql = "UPDATE prints set name='$name', description='$description', price='$price',price='$price' where id= '$id'";
+    $sql = "UPDATE prints set name='$name', description='$description', price='$price',price='$price' where prints_id= '$prints_id'";
 #print $sql;
 
 if ($conn->query($sql) === TRUE) { # this executes the insert and tests if it works

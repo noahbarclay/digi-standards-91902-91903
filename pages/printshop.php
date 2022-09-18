@@ -1,18 +1,18 @@
 <?php include("../admin/setup.php");?>  <!-- This is the setup file. -->
         <?php 
     print_r($_GET);
-    $id= $_GET["id"]; ?>
+    $prints_id= $_GET["prints_id"]; ?>
 
 
     <?php   
-    $sql = "SELECT * FROM prints where id= $id";
+    $sql = "SELECT * FROM prints where prints_id= $prints_id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // output data of each row
         $row = $result->fetch_assoc(); 
         #debugging print_r($row);
-        $id=$row["id"];
+        $prints_id=$row["prints_id"];
         $name=$row["name"];
         $price=$row["price"];
         $description=$row["description"];
@@ -35,12 +35,12 @@ $conn->close();
       <div class="column-xs-12">
         <nav></nav>
           <ol class="breadcrumb-list">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Prints</a></li>
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item"><a href="prints.php">Prints</a></li>
             <li class="breadcrumb-item active"><?php echo "$name" ?></li>
        
         <!-- Product section-->
-        <form action="edit_action_page.php" method="post" >
+        <form action="buynow.php" method="post" >
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
@@ -56,7 +56,7 @@ $conn->close();
                        
                         <div class="d-flex">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem"/>
-                            <input class="btn btn-outline-dark flex-shrink-0" type="submit" value="          Add to cart          "> 
+                            <input class="btn btn-outline-dark flex-shrink-0" type="submit" value="         Order Now          "> 
                                 <i class="bi-cart-fill me-1"></i>
                             </input>
                         </div>

@@ -40,9 +40,8 @@
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white text-center">
                 <h1 class="mb-3">Welcome to Pix Prints</h1>
-                <h5 class="mb-4">Shop</h5>
-                <a class="btn btn-outline-light btn-lg m-2" href="contact.php"
-                  role="button" rel="nofollow"></a>
+                <a class="btn btn-outline-light btn-lg m-2" href="prints.php"
+                  role="button" rel="nofollow">Shop now!</a>
               </div>
             </div>
           </div>
@@ -53,7 +52,7 @@
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white text-center">
-                <h2>You can place here any content</h2>
+                <h2>Beautiful photos of the Mahurangi Region!</h2>
               </div>
             </div>
           </div>
@@ -64,9 +63,9 @@
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
             <div class="d-flex justify-content-center align-items-center h-100">
               <div class="text-white text-center">
-                <h2\>Shop</h2>
+                <h2>Contact</h2>
                 <a class="btn btn-outline-light btn-lg m-2"
-                  href="prints.php target="_blank" role="button">Shop Now</a>
+                  href="contact.php"> Contact Us</a>
               </div>
             </div>
           </div>

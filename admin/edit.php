@@ -85,29 +85,34 @@
         
   <table id="customers">
     <tr>
-      <th>Page Num</th>
-      <th>Title1</th>
-      <th>img1</th>
+      <th>Order Number</th>
+      <th>Account</th>
+      <th>Print</th>
     </tr>
 <?php  
    // $message= $_SESSION["message"];
     //  print $message;
-    $sql = "SELECT * FROM pages";
+    $sql = "SELECT * FROM order";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         // output data of each row
      while($row = $result->fetch_assoc()) {
         #print_r($row); #debugging 
-        $pageID=$row["id"]; 
-        $title1=$row["title1"];
-        $img1=$row["img1"];
+        $order_id=$row["order_id"]; 
+        $accounts_id=$row["account_id"];
+        $prints_id=$row["prints_id"];
+        
+
+
+
+        
 ?>
     <tr>
-      <td><?php print $pageID; ?>
-          <a href='edit_page.php?id=<?php print $pageID; ?>'>Edit</a>
+      <td><?php print $order_id; ?>
+          <a href='order_delete.php?id=<?php print $order_id; ?>'>Edit</a>
           </td>
-      <td><?php print $title1; ?></td>
-      <td><?php print $img1; ?></td>
+      <td><?php print $account_id; ?></td>
+      <td><?php print $prints_id ?></td>
     </tr>
 <?php
     }

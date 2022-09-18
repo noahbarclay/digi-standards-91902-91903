@@ -6,7 +6,7 @@ print_r ($_POST);
 
 $name = $_POST["name"];
 $email = $_POST["email"];
-$phone = addslashes($_POST["subject"]);
+$phone = addslashes($_POST["phone"]);
 $message = addslashes($_POST["message"]);
 
 $sql = "INSERT INTO contact (name, email, phone, message)

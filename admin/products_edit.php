@@ -18,20 +18,20 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
 <?php 
     print_r($_GET);
-    $id= $_GET["id"]; ?>
+    $prints_id= $_GET["prints_id"]; ?>
 
 			<div class="content">
 			<h2>Edit page</h2>
 	
 		<?php   
-    $sql = "SELECT * FROM prints where id= $id";
+    $sql = "SELECT * FROM prints where prints_id= $prints_id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // output data of each row
         $row = $result->fetch_assoc(); 
         #debugging print_r($row);
-        $id=$row["id"]; 
+        $prints_id=$row["prints_id"]; 
         $name=$row["name"];
         $image=$row["image"];
         $description=$row["description"];
@@ -98,7 +98,7 @@ if (!isset($_SESSION['loggedin'])) {
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb mb-0 py-3">
               <li class="breadcrumb-item"><a class="fw-light" href="admin.php">Home</a></li>
-              <li class="breadcrumb-item active fw-light" aria-current="page">Product Edit Page <?php print $id ?>  </li>
+              <li class="breadcrumb-item active fw-light" aria-current="page">Product Edit Page <?php print $prints_id ?>  </li>
             </ol>
           </nav>
         </div>
@@ -125,8 +125,8 @@ if (!isset($_SESSION['loggedin'])) {
         <label for="pagenum">Product ID</label>
       </div>
       <div class="col-75">
-    <?php print $id ?>
-          <input type="hidden" id="id" name="id" value= "<?php print $id ?>">
+    <?php print $prints_id ?>
+          <input type="hidden" id="prints_id" name="prints_id" value= "<?php print $prints_id ?>">
       </div>
     </div>
 

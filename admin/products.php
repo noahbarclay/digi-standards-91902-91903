@@ -100,16 +100,16 @@
         // output data of each row
      while($row = $result->fetch_assoc()) {
         #print_r($row); #debugging 
-        $id=$row["id"]; 
+        $prints_id=$row["prints_id"]; 
         $name=$row["name"];
         $image=$row["image"];
         $description=$row["description"];
         $price=$row["price"];
 ?>
     <tr>
-    <td><?php print $id; ?>
-          <a href='contact_delete.php?id=<?php print $id; ?>'>Delete?</a>
-          <a href='products_edit.php?id=<?php print $id; ?>'>Edit</a>
+    <td><?php print $prints_id; ?>
+          <a href='product_delete.php?prints_id=<?php print $prints_id; ?>'>Delete?</a>
+          <a href='products_edit.php?prints_id=<?php print $prints_id; ?>'>Edit</a>
           </td>
       <td><?php print $name; ?></td>
       <td><?php print $description; ?></td>

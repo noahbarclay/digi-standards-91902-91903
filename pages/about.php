@@ -25,12 +25,12 @@ html {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
 }
 
 .about-section {
-  padding: 50px;
+  padding: 40px;
   text-align: center;
   background-color: #474e5d;
   color: white;
@@ -68,7 +68,7 @@ html {
 
 @media screen and (max-width: 650px) {
   .column {
-    width: 100%;
+    width: 90%;
     display: block;
   }
 }
@@ -87,14 +87,14 @@ a {
 </div>
 <br>
 
-<p STYLE="padding: 50px">
+<h4 STYLE="padding: 50px">
 Pix Prints is a year 13 business group at Mahurangi College selling framed prints of our local region. We want to promote our environment, beautiful beaches, forests and wildlife.
 
 We are donating a percentage of our profits to a local environmental cause (Tawharanui Regional Park). This ties in with the purpose of our product and how we want to promote our beautiful natural environment and also raise awareness. We are also wanting to use upcycled frames we purchase from hospice to mitigate the effects on the environment.
 
 This is also innovative because you are not able to buy nice photos and prints of specific places that aren't as popular, meaning there is a gap in the market. Places such as Warkworth, Kaipara, Leigh, and Matakana don't actually have anywhere where you can purchase nice prints. Another point of difference is that we are having an online presence with a library where customers can easily browse and purchase images. They are going to be competitively charged. 
 
-We are also going to have environmentally friendly packaging.</p>
+We are also going to have environmentally friendly packaging.</h4>
 
 <h2 style="text-align:center">Our Team</h2>
 
@@ -111,6 +111,7 @@ We are also going to have environmentally friendly packaging.</p>
         <p>ja54@mahurangi.school.nz</p>
         <button class="button"><a href = "mailto: ja54@mahurangi.school.nz">Contact</a></button>
       </div>
+      <br>
     </div>
   </div>
 
@@ -124,6 +125,7 @@ We are also going to have environmentally friendly packaging.</p>
         <p>sv15@mahurangi.school.nz</p>
         <button class="button"><a href = "mailto: sv15@mahurangi.school.nz">Contact</a></button>
       </div>
+      <br>
     </div>
   </div>
   
@@ -137,9 +139,17 @@ We are also going to have environmentally friendly packaging.</p>
         <p>wt40@mahurangi.school.nz</p>
         <button class="button"><a href = "mailto: wt40@mahurangi.school.nz"><p1>Contact<p1></a></button>
       </div>
+      <br>
     </div>
+
   </div>
 </div>
+
+
+<br>
+<br>
+<br>
+<br>
 
 </body>
 
