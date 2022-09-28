@@ -120,15 +120,21 @@ if (!isset($_SESSION['loggedin'])) {
                   <div class="table-responsive">
                     <table class="table text-sm mb-0">
     <form action="products_edit_action.php" method="post" >
-    <div class="row">
+
+
+
+
+<!-- product ID -->
+
+<div class="row">
       <div class="col-25">
-        <label for="pagenum">Product ID</label>
+        <label for="prints_id">Product ID</label>
       </div>
       <div class="col-75">
-    <?php print $prints_id ?>
-          <input type="hidden" id="prints_id" name="prints_id" value= "<?php print $prints_id ?>">
+        <input type="text" id="prints_id" name="prints_id" value="<?php print $prints_id ?>">
       </div>
     </div>
+
 
 <!-- Name -->
 
