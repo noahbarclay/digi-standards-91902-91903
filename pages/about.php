@@ -98,6 +98,8 @@ We are also going to have environmentally friendly packaging.</h4>
 
 <h2 style="text-align:center">Our Team</h2>
 
+mysqldump -u root -p pix prints > db_backup.sql
+
 
 
 <div class="row">
